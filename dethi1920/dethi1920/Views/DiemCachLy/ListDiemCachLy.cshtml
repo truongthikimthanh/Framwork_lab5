@@ -1,0 +1,12 @@
+﻿@model List<dethi1920.Models.DiemCachLyModel>
+
+<form action="/DiemCachLy/LietKe" method ="POST">
+    <select name="MaDiemCachLy" id="MaDiemCachLy">
+        @foreach (var item in Model)
+        {
+            <option value="@item.MaDiemCachLy">@item.TenDiemCachLy </option>
+
+        }
+     </select><br>
+     <input type="submit" value="Liệt Kê" name="submit" id="Liet ke" />
+</form>

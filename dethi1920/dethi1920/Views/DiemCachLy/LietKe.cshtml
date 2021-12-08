@@ -1,0 +1,33 @@
+﻿@model IEnumerable<dethi1920.Models.CongNhanModel>
+    <form action="/DiemCachLy/ListDiemCachLy" method="post">
+        <h2>Danh sách thiết bị của nhân viên được chọn sửa </h2>
+
+        <table class="table table-bordered">
+            <thread>
+                <tr>
+                    <td>Mã công nhân</td>
+                    <td>Tên Công nhân</td>
+
+                    <td>Chức năng</td>
+
+                </tr>
+            </thread>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@item.MaCongNhan</td>
+                        <td>@item.TenCongNhan</td>
+
+
+                        <td><a href="Delete?MaCongNhan=@item.MaCongNhan">Delete</a>
+                        <a href="View?MaCongNhan=@item.MaCongNhan">View</a></td>
+
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </form>
